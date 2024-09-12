@@ -1,10 +1,9 @@
 [build]
-  command = "npm run build"
-  publish = ".next"
+  command = "next build && next export"
+  publish = "out"
 
-[functions]
-  node_bundler = "esbuild"
-  
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [build.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
-
