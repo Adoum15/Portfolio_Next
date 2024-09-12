@@ -53,8 +53,6 @@ function Contact() {
       name="contact" 
       method="POST" 
       data-netlify="true"
-      netlify-honeypot="bot-field"  // Champ pour éviter les soumissions de bots
-      action="/thank-you"  // Redirection après soumission
       className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
     >
       {/* Champ caché obligatoire pour Netlify Forms */}
@@ -124,6 +122,8 @@ function Contact() {
       </div>
     </motion.section>
   );
+ 
 }
+
 
 export default Contact;
