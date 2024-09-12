@@ -5,7 +5,6 @@
 [functions]
   node_bundler = "esbuild"
   
-[build.processing.forms]
-  enabled = true
-  skip_processing = false
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
