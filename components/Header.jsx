@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Button } from "./ui/button";
 
 import Nav from './Nav'
-// import MobileNav from './MobileNav';
+import MobileNav from './MobileNav';
 
 function Header() {
   return (
@@ -14,14 +14,15 @@ function Header() {
         </h1>
         </Link>
         <div className='hidden xl:flex items-center gap-8'>
-        <Nav />
-        <Link href="/contact">
-        <Button>Hire me</Button>
-        </Link>
+          <Nav />
+          <Link href="/contact">
+              <Button>Hire me</Button>
+          </Link>
         </div>
+        {/* mobile nav */}
         <div className="xl:hidden">
-          {/* <MobileNav /> */}
-          mobile nav
+          <MobileNav />
+          
         </div>
       </div>
     </header>
