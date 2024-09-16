@@ -22,7 +22,7 @@ function Photo() {
           }}
         className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
           <Image
-            src="/photo3.png"
+            src="/photo4.png"
             priority
             quality={100}
             fill
