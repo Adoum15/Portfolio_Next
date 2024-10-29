@@ -49,6 +49,7 @@ function Contact() {
       method="POST" 
       data-netlify="true"
       className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+      netlify
     >
       {/* Champ caché obligatoire pour Netlify Forms */}
       <input type="hidden" name="form-name" value="contact" />

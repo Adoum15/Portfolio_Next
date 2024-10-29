@@ -134,7 +134,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Here are the technologies that I master in which I can provide you with quality expertise.",
   skillList: [
     {
       icon: <FaHtml5 />,
