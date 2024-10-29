@@ -45,7 +45,7 @@ function Contact() {
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
           <form 
-      name="contact" 
+      name="test-form" 
       method="POST" 
       data-netlify="true"
       netlify-honeypot="bot-field"
