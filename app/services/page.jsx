@@ -9,28 +9,28 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I am a React.js Next.js Front-end Developer and Web Integrator, currently freelance.",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I help companies stand out with captivating digital solutions that build loyalty for their users.",
     href: "",
   },
   {
     num: "03",
     title: "Logo Design",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "I suggest you create the business logo of your dreams. My goal? Retranscribe the values ​​of your brand in an elegant logo that remains engraved in the memory of your customers. I offer you as many modifications as necessary to arrive at your dream logo.",
     href: "",
   },
   {
     num: "04",
-    title: "Web Development",
+    title: "SEO",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "optimal SEO positioning on Google and visitors who turn into customers.",
     href: "",
   },
 ];

@@ -9,7 +9,6 @@ import {
   FaFigma,
 } from "react-icons/fa";
 
-
 import {
   siTailwindcss,
   siNextDotJs,
@@ -40,7 +39,7 @@ const about = {
     },
     {
       fieldName: "Nationality",
-      fieldValue: "Frensh",
+      fieldValue: "French",
     },
     {
       fieldName: "Email",
@@ -62,7 +61,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "With solid experience and in-depth expertise, I put my know-how at the service of each project with dedication and professionalism. My goal is to provide innovative, high-performance web solutions to help your business grow. I firmly believe in the importance of details in achieving excellence, and it is this meticulous attention that characterizes my approach to work..",
   items: [
     {
       company: "Tech Solutions Inc.",
@@ -102,7 +101,7 @@ const education = {
   icon: "cap.svg",
   title: "My education",
   description:
-    "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Front-End Developer with 3 years of experience and trained in bootcamps and online training, I had the opportunity to carry out 50 front-end projects on various technologies, My expertise covers: Full-Stack Development: Next .js, React, TypeScript, CSS3, Node.js.",
   items: [
     {
       institution: "Online Course Platform",
@@ -208,7 +207,7 @@ function Resume() {
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left" >
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
@@ -237,7 +236,7 @@ function Resume() {
               </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
-            <div className="flex flex-col gap-[30px] text-center xl:text-left" >
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
@@ -267,40 +266,54 @@ function Resume() {
             </TabsContent>
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left" >
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description}
+                  </p>
                 </div>
-                <ul className="grid grid -cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index)=>{
-                    return <li key={index}>
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] flex justify-center items-center group">
-                            <div className="text-6xl group-hover:text-accent transition--all duration-300">{skill.icon}</div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </li>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  {skills.skillList.map((skill, index) => {
+                    return (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accent transition--all duration-300">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
                   })}
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]">
-                  {about.info.map((item,index)=>{
+                  {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <sapn className="text-white/60">{item.fieldName}</sapn>
                         <sapn className="text-xl">{item.fieldValue}</sapn>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>

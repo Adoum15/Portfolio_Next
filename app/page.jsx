@@ -2,6 +2,7 @@ import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 function Home() {
   return (
@@ -15,19 +16,20 @@ function Home() {
               Hello I'm <br /> <span className="text-accent">Adoum Salah</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant dogital experiences and I am
-              proficient in various programming languages and technologies
+            Developer passionate about code and technical and product challenges, I am constantly looking for innovative projects where I can make a difference.
             </p>
           
           <div className="flex flex-col xl:flex-row items-center gap-8 ">
+            <Link href="https://cv-adoum.netlify.app/" target="blank" >
             <Button
               variant="outline"
               size="lg"
               className="uppercase flex items-center gap-2"
             >
-              <span>Download CV</span>
+              <span >Download CV</span>
               <FiDownload className="text-xl" />
             </Button>
+            </Link>
             <div className="mb-8 xl:mb-0">
               <Social
                 containerStyles="flex gap-6"

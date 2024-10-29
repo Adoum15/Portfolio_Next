@@ -28,11 +28,6 @@ const info = [
     title: "Email",
     description: "sadoumachi@gmail.com",
   },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "Adresse",
-    description: "7 rue baudin Courbevoie 92400",
-  },
 ];
 
 function Contact() {
@@ -65,14 +60,18 @@ function Contact() {
 
       <h3 className="text-4xl text-accent">Let's work together</h3>
       <p className="text-white/60">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
-        exercitationem quas dicta. Provident, reiciendis.
+      The advantages of working with me: <br />
+      💯 Quality of agency service with a personalized approach  <br />
+      🔁 As many edits as you want  <br />
+      ✅ Satisfied or refunded <br />
+
+      Quick response in less than 1 hour. Ready to discuss your project? ➡️ Send me a message 📩
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Input type="text" name="firstname" placeholder="Firstname" required />
         <Input type="text" name="lastname" placeholder="Lastname" required />
-        <Input type="email" name="email" placeholder="Email" required />
+        <Input type="email"name="email" placeholder="Email" required />
         <Input type="tel" name="phone" placeholder="Phone number" required />
       </div>
 
@@ -103,7 +102,7 @@ function Contact() {
     </form>
           </div>
           {/* info */}
-          <div className="flex-1 flex items-center xl:justify-end xl:order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="flex-1 flex items-center xl:justify-end xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index)=>{
                 return <li key={index} className="flex items-czntzr gap-6">

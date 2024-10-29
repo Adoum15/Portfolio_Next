@@ -23,36 +23,69 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
+    title: "Agence Ledor",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/1.png",
-    live: "",
-    github: "",
+      "These is a real estate agency site, it is also one of my first website which was entirely created in html and css.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }],
+    image: "/agence.png",
+    live: "https://agence-immo-ledor.netlify.app/",
+    github: ""
   },
   {
     num: "02",
     category: "frontend",
-    title: "project 2",
+    title: "caffe fleur",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/2.png",
-    live: "",
-    github: "",
+      "The café fleur site is also a simple site but the advantage of this site is that it is not a single page, and the style of this site is also more advanced.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }],
+    image: "/caffe_fleur.png",
+    live: "https://caffe-fleur.netlify.app/",
+    
   },
   {
     num: "03",
     category: "frontend",
-    title: "project 3",
+    title: "Cookchef",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/3.jpg",
-    live: "",
+      "Cookchef is a site that lists recipes that can be saved locally. this site also allows you to search for a new recipe thanks to a search algorithm which allows you to display a recipe according to the name, it is also possible to add sites as favorites, I notably discovered and experimented with scss thanks to this site.",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"},{ name: "React"},{ name: "SCSS"}],
+    image: "/cookchef.png",
+    live: "https://cook-chef.netlify.app/",
     github: "",
   },
+  {
+    num: "04",
+    category: "frontend",
+    title: "Flag of the world",
+    description:
+      "Flag of the world is a site which displays the flags of the world according to continent for its I use an API which keeps important information on the countries such as their name, image, number of inhabitants.",
+    stack: [ { name: "Firebase"},{ name: "React"}],
+    image: "/Drapeau.png",
+    live: "https://drapeau-du-monde.web.app",
+    github: "https://github.com/Adoum15/React-drapeau",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "Pokedex",
+    description:
+      "Pokedex is a site that uses authentication as well as the reading of an API for the display of pokemon as well as the different categories of them such as the type, it is also possible to delete and modify the characteristics, the 'image and name of the pokemon to personalize it.",
+    stack: [ { name: "Firebase"},{ name: "React"}],
+    image: "/pokedex.png",
+    live: "https://pokedex-00.web.app/pokemons",
+    github: "https://github.com/Adoum15/react-pokedex",
+  },
+  {
+    num: "06",
+    category: "frontend and backend",
+    title: "Codeurs-Monkeys",
+    description:
+      "Codeur-monkey is a React learning platform that aims to bring together different learners of this technology. The creation of this site allowed me to discover the functions, authentication, the concept of onboarding and data management in Firebase.",
+    stack: [{ name: "Next.js" }, { name: "Tailwind CSS" }, { name: "Firebase"},{ name: "React"}],
+    image: "/Factory-project.png",
+    live: "https://codersmonkey-2-e8e48.web.app/",
+  },
+  
 ];
 
 function Work() {
@@ -79,8 +112,9 @@ function Work() {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h[50%]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                {project.num}
+              <div className="text-8xl leading-none font-extrabold text-transparent text-outline flex justify-between ">
+                <div>{project.num}</div>
+                <div className="text-4xl font-bold text-accent pt-6">{project.title}</div>
               </div>
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
@@ -102,7 +136,7 @@ function Work() {
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.live}>
+                <Link href={project.live} target="blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -115,7 +149,7 @@ function Work() {
                   </TooltipProvider>
                 </Link>
                 {/* github project button */}
-                <Link href={project.github}>
+                {project.github && <Link href={project.github} target="blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -126,7 +160,8 @@ function Work() {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link> }
+                
               </div>
             </div>
           </div>
